@@ -162,12 +162,12 @@ public class Windows extends javax.swing.JFrame {
         d.findElementByCssSelector("#listaLokalizacjiDlaWylotuDo label[iata=\"" + CodeEnd + "\"]").click();
         d.findElementById("ButtonSzukajCzarterow").click();
 
-        List<WebElement> okienkaZCenami = d.findElementsByCssSelector(".fc-corner-left");
+        List<WebElement> windowsPrice = d.findElementsByCssSelector(".fc-corner-left");
 
-        for (WebElement okienko : okienkaZCenami) {
+        for (WebElement windows : windowsPrice) {
 
-            String Date = okienko.findElement(By.cssSelector(".dataWybranegoDnia")).getAttribute("value");
-            String Price = (okienko.findElement(By.cssSelector(".cenaNaKalendarzu")).getText().replace(" ", "").replace("zł", ""));
+            String Date = windows.findElement(By.cssSelector(".dataWybranegoDnia")).getAttribute("value");
+            String Price = (windows.findElement(By.cssSelector(".cenaNaKalendarzu")).getText().replace(" ", "").replace("zł", ""));
             String wynik = Start + " " + End + " " + Date + " " + Price + " ";
 
             System.out.println(wynik);
