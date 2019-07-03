@@ -168,10 +168,6 @@ public class Windows extends javax.swing.JFrame {
 
             String Date = windows.findElement(By.cssSelector(".dataWybranegoDnia")).getAttribute("value");
             String Price = (windows.findElement(By.cssSelector(".cenaNaKalendarzu")).getText().replace(" ", "").replace("zł", ""));
-            String wynik = Start + " " + End + " " + Date + " " + Price + " ";
-
-            System.out.println(wynik);
-
             model.insertRow(model.getRowCount(), new Object[]{Start, End, Price, Date});
         }
 
